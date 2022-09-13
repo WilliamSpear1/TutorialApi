@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import java.sql.DatabaseMetaData;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Optional;
@@ -24,9 +25,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 
 public class TutorialController {
+    /*----------------------*/
+    /* Members              */
+    /*----------------------*/
     @Autowired
     TutorialRepository tutorialRepository;
     
+    /*----------------------*/
+    /* Methods              */
+    /*----------------------*/
     @GetMapping("/tutorials")
     public ResponseEntity<List<Tutorial>> getAllTutorials(@RequestParam(required = false) String title){
         try {

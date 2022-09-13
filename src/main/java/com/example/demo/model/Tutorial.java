@@ -11,6 +11,9 @@ import javax.persistence.Table;
 @Table(name = "tutorials")
 
 public class Tutorial {
+   /*----------------------*/
+   /* Members              */
+   /*----------------------*/
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
@@ -22,6 +25,9 @@ public class Tutorial {
     @Column(name = "published")
     private boolean published;
     
+    /*----------------------*/
+    /* Constructor(s)       */
+    /*----------------------*/
     public Tutorial(){}
     
     public Tutorial(String title, String description, boolean published) {
@@ -30,6 +36,9 @@ public class Tutorial {
         this.published   = published;
     }
     
+    /*----------------------*/
+    /* Methods              */
+    /*----------------------*/
     public long getId() {
         return id;
     }
